@@ -7,6 +7,54 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Getting Started
+
+Follow these steps to set up the project locally:
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd task
+```
+
+### 2. Install Dependencies
+
+```bash
+composer update
+```
+
+### 3. Configure Environment
+
+Copy the `.env.example` file to `.env` and configure your database settings.
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+### 4. Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### 5. Create Storage Link
+
+Create a symbolic link from `public/storage` to `storage/app/public`. This is required to store and access images and resumes.
+
+```bash
+php artisan storage:link
+```
+
+### 6. Start the Development Server
+
+```bash
+php artisan serve
+```
+
+The application will be available at `http://localhost:8000`.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
